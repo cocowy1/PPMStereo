@@ -9,14 +9,15 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 [**Paper**](#) · [**Project Page**](#) · [**BibTeX**](#citing-ppmstereo)
 
 ---
+## Demo Visualization
+<p align="center">
+  <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_video044.gif" alt="demo" height="75%" width="100%">
+</p>
 
 ## 😊 Overview
 
 **PPMStereo** tackles temporally consistent depth estimation from **stereo videos**. The core idea is a **Pick-and-Play Memory (PPM)** module that first **picks** high-quality reference frames and then **plays** (re-weights) them for aggregation, yielding a **compact yet informative** temporal memory. This design maintains **long-range spatio-temporal consistency** while keeping computation tractable. Experiments on **SceneFlow**, **Dynamic Replica**, **Sintel**, and more show state-of-the-art accuracy and temporal stability with a favorable efficiency–accuracy trade-off.
 
-<p align="center">
-  <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_video044.gif" alt="demo" width="80%">
-</p>
 
 ---
 
