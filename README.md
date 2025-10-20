@@ -27,9 +27,11 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
   - **Play:** query-adaptive weighting to aggregate selected frames for robust cost refinement.  
 - **Long-range consistency** with a **compact dynamic buffer**, avoiding costly exhaustive search.  
 - **Strong results** and **efficiency** under fewer RAFT-style iterations while maintaining accuracy.
-
-![teaser](msic/overview_2.jpg)
 ---
+
+## Framework
+![teaser](msic/overview_2.jpg)
+![teaser](msic/DMA_2.jpg)
 
 ## Dataset: Dynamic Replica
 
