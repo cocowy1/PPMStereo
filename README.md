@@ -15,7 +15,7 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 **PPMStereo** tackles temporally consistent depth estimation from **stereo videos**. The core idea is a **Pick-and-Play Memory (PPM)** module that first **picks** high-quality reference frames and then **plays** (re-weights) them for aggregation, yielding a **compact yet informative** temporal memory. This design maintains **long-range spatio-temporal consistency** while keeping computation tractable. Experiments on **SceneFlow**, **Dynamic Replica**, **Sintel**, and more show state-of-the-art accuracy and temporal stability with a favorable efficiency–accuracy trade-off.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37815420/236242052-e72d5605-1ab2-426c-ae8d-5c8a86d5252c.gif" alt="demo" width="70%">
+  <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_video044.gif" alt="demo" width="80%">
 </p>
 
 ---
@@ -31,8 +31,8 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 
 ## 👉 Framework
 <p>
-  <img src="msic/overview_2.jpg" alt="weather" width="420" height="350" />
-   <img src="msic/DMA_2.jpg" alt="efficiency" width="420" height="350" />
+  <img src="msic/overview_2.jpg" alt="weather" width="410" height="350" />
+   <img src="msic/DMA_2.jpg" alt="efficiency" width="410" height="350" />
 </p>
 
 
