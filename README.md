@@ -1,14 +1,14 @@
-# [NeurIPS 2023] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
+# [NeurIPS 2025] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
 
 **[City University of Hong Kong](https://www.cityu.edu.hk/en)**
 
-Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng Wu
+Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng Wu
 
 [[`Paper`](https://research.facebook.com/publications/dynamicstereo-consistent-dynamic-depth-from-stereo-videos/)] [[`Project`](https://dynamic-stereo.github.io/)] [[`BibTeX`](#citing-dynamicstereo)]
 
 ![nikita-reading](https://user-images.githubusercontent.com/37815420/236242052-e72d5605-1ab2-426c-ae8d-5c8a86d5252c.gif)
 
-**DynamicStereo** is a transformer-based architecture for temporally consistent depth estimation from stereo videos. It has been trained on a combination of two datasets: [SceneFlow](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html) and **Dynamic Replica** that we present below.
+**PPMStereo** is a transformer-based architecture for temporally consistent depth estimation from stereo videos. It has been trained on a combination of two datasets: [SceneFlow](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html) and **Dynamic Replica** dataset.
 
 ### Download the Dynamic Replica dataset
 Download `links.json` from the *data* tab on the [project website](https://dynamic-stereo.github.io/) after accepting the license agreement.
@@ -33,7 +33,7 @@ You can use [this PyTorch dataset class](https://github.com/facebookresearch/dyn
 
 ## Installation
 
-Describes installation of DynamicStereo with the latest PyTorch3D, PyTorch 1.12.1 & cuda 11.3
+Describes installation of PPMStereo with the latest PyTorch3D, PyTorch 1.12.1 & cuda 11.3
 
 ### Setup the root for all source files:
 ```
@@ -43,8 +43,8 @@ export PYTHONPATH=`(cd ../ && pwd)`:`pwd`:$PYTHONPATH
 ```
 ### Create a conda env:
 ```
-conda create -n dynamicstereo python=3.8
-conda activate dynamicstereo
+conda create -n ppmstereo python=3.10
+conda activate ppmstereo
 ```
 ### Install requirements
 ```
@@ -67,28 +67,21 @@ cd ../..
 
 
 ## Evaluation
-To download the checkpoints, you can follow the below instructions:
-```
-mkdir checkpoints
-cd checkpoints
-wget https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_sf.pth 
-wget https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_dr_sf.pth 
-cd ..
-```
-You can also download the checkpoints manually by clicking the links below. Copy the checkpoints to `./dynamic_stereo/checkpoints`.
 
-- [DynamicStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_sf.pth) trained on SceneFlow
-- [DynamicStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_dr_sf.pth) trained on SceneFlow and *Dynamic Replica*
+You can  download the checkpoints manually by clicking the links below. Copy the checkpoints to `./ckpt/ppmstereo/`.
 
-To evaluate DynamicStereo:
+- [PPMStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_sf.pth) trained on SceneFlow
+- [PPMStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_dr_sf.pth) trained on SceneFlow and *Dynamic Replica*
+
+To evaluate PPMStereo:
 ```
 python ./evaluation/evaluate.py --config_name eval_dynamic_replica_40_frames \
- MODEL.model_name=DynamicStereoModel exp_dir=./outputs/test_dynamic_replica_ds \
- MODEL.DynamicStereoModel.model_weights=./ckpt/dynamic_stereo_sf.pth 
+ MODEL.model_name=PPMStereoModel exp_dir=./outputs/test_dynamic_replica_ds \
+ MODEL.PPMStereoModel.model_weights=./ckpt/ppmstereo_stereo_sf.pth 
 ```
-Due to the high image resolution, evaluation on *Dynamic Replica* requires a 32GB GPU. If you don't have enough GPU memory, you can decrease `kernel_size` from 20 to 10 by adding `MODEL.DynamicStereoModel.kernel_size=10` to the above python command. Another option is to decrease the dataset resolution.
+Due to the high image resolution, evaluation on *Dynamic Replica* requires a 48GB GPU. If you don't have enough GPU memory, you can decrease `kernel_size` from 20 to 10 by adding `MODEL.PPMStereoModel.kernel_size=10` to the above python command. Another option is to decrease the dataset resolution. Additionally, we recommend reducing iters = 20 to iters = 10 with only a slight drop in accuracy to facilitate the evaluation process.
 
-As a result, you should see the numbers from *Table 5* in the [paper](https://arxiv.org/pdf/2305.02296.pdf). (for this, you need `kernel_size=20`)
+As a result, you should see the numbers from *Table 3* in the [paper](https://arxiv.org/pdf/2305.02296.pdf). (for this, you need `kernel_size=20`)
 
 Reconstructions of all the *Dynamic Replica* splits (including *real*) will be visualized and saved to `exp_dir`.
 
@@ -106,11 +99,10 @@ Other public datasets we use:
  - [KITTI 2015](http://www.cvlibs.net/datasets/kitti/eval_stereo.php) 
 
 ## Training
-Training requires a 32GB GPU. You can decrease `image_size` and / or `sample_len` if you don't have enough GPU memory.
-You need to donwload SceneFlow before training. Alternatively, you can only train on *Dynamic Replica*.
+Training requires a100 GB GPUs. You can decrease `image_size` and / or `sample_len` if you don't have enough GPU memory.
 ```
-python train.py --batch_size 1 \
- --spatial_scale -0.2 0.4 --image_size 384 512 --saturation_range 0 1.4 --num_steps 200000  \
+python train.py --batch_size 2 \
+ --spatial_scale -0.2 0.4 --image_size 320 512 --saturation_range 0 1.4 --num_steps 200000  \
  --ckpt_path dynamicstereo_sf_dr  \
   --sample_len 5 --lr 0.0003 --train_iters 10 --valid_iters 20    \
   --num_workers 28 --save_freq 100  --update_block_3d --different_update_blocks \
@@ -118,14 +110,12 @@ python train.py --batch_size 1 \
 ```
 If you want to train on SceneFlow only, remove the flag `dynamic_replica` from `train_datasets`.
 
-
-
 ## License
 The majority of dynamic_stereo is licensed under CC-BY-NC, however portions of the project are available under separate license terms: [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo) is licensed under the MIT license, [LoFTR](https://github.com/zju3dv/LoFTR) and [CREStereo](https://github.com/megvii-research/CREStereo) are licensed under the Apache 2.0 license.
 
 
 ## Citing DynamicStereo
-If you use DynamicStereo or Dynamic Replica in your research, please use the following BibTeX entry.
+If you use our model in your research, please use the following BibTeX entry.
 ```
 @article{wang2025ppm,
   title={PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching},
@@ -134,3 +124,13 @@ If you use DynamicStereo or Dynamic Replica in your research, please use the fol
   year={2025}
 }
 ```
+## Acknowledgement
+In this project, we use parts of public codes and thank the authors for their contribution in: 
+
+[DynamicStereo](https://github.com/facebookresearch/dynamic_stereo)
+
+[BidaStereo](https://github.com/TomTomTommi/bidastereo)
+
+[StereoAnyVideo](https://github.com/TomTomTommi/stereoanyvideo)
+
+We thank the original authors for their excellent works.
