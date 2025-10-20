@@ -171,7 +171,7 @@ This project is released under the **MIT License**. See [LICENSE](./LICENSE).
 ```bibtex
 @article{wang2025ppm,
   title   = {PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching},
-  author  = {Yun Wang and Junjie Hu and Qiaole Dong and Yongjian Zhang and Yanwei Fu and Tin Lun Lam and Dapeng Wu},
+  author  = {Wang, Yun and Hu, Junjie and Dong, Qiaole and Zhang, Yongjian and Fu, Yanwei and Lam, Tin Lun  and Wu, Dapeng},
   journal = {NeurIPS},
   year    = {2025}
 }
