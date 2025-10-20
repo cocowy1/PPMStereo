@@ -10,9 +10,16 @@ Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng
 
 ---
 ## 🌟 Demo Visualization
+### Depth Visualization
 <p align="center">
   <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_video044.gif" alt="demo" width="48%">
   <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_video058.gif" alt="demo" width="48%">
+</p>
+
+### Reconstruction Visualzation
+<p align="center">
+  <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_recon_video030.gif" alt="demo" width="48%">
+  <img src="https://github.com/cocowy1/PPMStereo/blob/main/msic/merged_output_recon_video044.gif" alt="demo" width="48%">
 </p>
 
 
