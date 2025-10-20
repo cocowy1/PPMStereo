@@ -79,7 +79,7 @@ python ./evaluation/evaluate.py --config_name eval_dynamic_replica_40_frames \
  MODEL.model_name=PPMStereoModel exp_dir=./outputs/test_dynamic_replica_ds \
  MODEL.PPMStereoModel.model_weights=./ckpt/ppmstereo_stereo_sf.pth 
 ```
-Due to the high image resolution, evaluation on *Dynamic Replica* requires a 48GB GPU. If you don't have enough GPU memory, you can decrease `kernel_size` from 20 to 10 by adding `MODEL.PPMStereoModel.kernel_size=10` to the above python command. Another option is to decrease the dataset resolution. Additionally, we recommend reducing iters = 20 to iters = 10 with only a slight drop in accuracy to facilitate the evaluation process.
+Due to the high image resolution, evaluation on *Dynamic Replica* requires a 48GB GPU. If you don't have enough GPU memory, you can decrease `kernel_size` from 20 to 10 by adding `MODEL.PPMStereoModel.kernel_size=10` to the above python command. Another option is to decrease the dataset resolution. Additionally, we recommend reducing `iters = 20` to `iters = 10` with only a slight drop in accuracy to facilitate the evaluation process.
 
 As a result, you should see the numbers from *Table 3* in the [paper](https://arxiv.org/pdf/2305.02296.pdf). (for this, you need `kernel_size=20`)
 
