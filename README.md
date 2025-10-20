@@ -180,10 +180,3 @@ We thank the authors and maintainers of the following excellent projects:
 - [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo)
 
 ---
-
-## Troubleshooting
-
-- **“embedded git repository” warning:** use **git submodule** or remove the inner `.git` and vendor the code.  
-- **Push rejected (non-fast-forward):** `git pull --rebase` first; to overwrite remote, use `git push --force-with-lease origin main`.  
-- **File >100MB:** use **Git LFS**.  
-- **CUDA/PyTorch mismatch:** ensure `cudatoolkit` matches your PyTorch build.
