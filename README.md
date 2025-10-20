@@ -104,7 +104,7 @@ python ./evaluation/evaluate.py --config_name eval_dynamic_replica_40_frames \
   MODEL.PPMStereoModel.model_weights=./ckpt/ppmstereo_stereo_sf.pth
 ```
 
-You may also select other models in the script (make sure to download their official weights):
+You may also select other models in the `test.py`script (make sure to download their official weights):
 
 ```python
 # evaluate.py (snippet)
