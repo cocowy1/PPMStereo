@@ -30,8 +30,11 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 ---
 
 ## Framework
-![teaser](msic/overview_2.jpg)
-![teaser](msic/DMA_2.jpg)
+<p>
+  <img src="msic/overview_2.jpg" alt="weather" width="400" height="300" />
+ <img src="msic/DMA_2.jpg" alt="efficiency" width="400" height="300" />
+</p>
+
 
 ## Dataset: Dynamic Replica
 
