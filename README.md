@@ -2,7 +2,7 @@
 
 **City University of Hong Kong**
 
-Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng Wu
+Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng Wu
 
 > **Status:** Accepted at NeurIPS 2025 (poster).
 
