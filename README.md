@@ -1,4 +1,4 @@
-# [NeurIPS 2025] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
+# 💥💥💥 [NeurIPS 2025] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
 
 **City University of Hong Kong**
 
@@ -10,7 +10,7 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 
 ---
 
-## Overview
+## 😊 Overview
 
 **PPMStereo** tackles temporally consistent depth estimation from **stereo videos**. The core idea is a **Pick-and-Play Memory (PPM)** module that first **picks** high-quality reference frames and then **plays** (re-weights) them for aggregation, yielding a **compact yet informative** temporal memory. This design maintains **long-range spatio-temporal consistency** while keeping computation tractable. Experiments on **SceneFlow**, **Dynamic Replica**, **Sintel**, and more show state-of-the-art accuracy and temporal stability with a favorable efficiency–accuracy trade-off.
 
@@ -20,7 +20,7 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 
 ---
 
-## What’s New in PPMStereo
+## 😘 What’s New in PPMStereo
 
 - **Pick-and-Play Memory (PPM):**  
   - **Pick:** via a **Quality Assessment Module (QAM)** to select reliable, non-redundant references.  
@@ -29,7 +29,7 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 - **Strong results** and **efficiency** under fewer RAFT-style iterations while maintaining accuracy.
 ---
 
-## Framework
+## 👉 Framework
 <p>
   <img src="msic/overview_2.jpg" alt="weather" width="450" height="350" />
    <img src="msic/DMA_2.jpg" alt="efficiency" width="450" height="350" />
