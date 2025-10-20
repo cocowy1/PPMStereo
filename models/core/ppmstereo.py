@@ -442,46 +442,7 @@ class PPMStereo(nn.Module):
     #     score = torch.matmul(q_, k_) + 1.
         
     #     return 1.2 * score
-    
-    def vis_attention(self, image1, current_query, selected_key, scale):
-        import numpy as np
-        import matplotlib.pyplot as plt
-        import cv2
-        attention_scores = torch.einsum('bsnd,bsmd->bnms', current_query.permute(0,2,1,3).contiguous().to(dtype=torch.bfloat16), \
-                                         selected_key.permute(0,2,1,3).contiguous().to(dtype=torch.bfloat16)) / torch.sqrt(torch.tensor(128, dtype=torch.bfloat16)).float()
-        
-        attention_weights = torch.softmax(attention_scores, dim=2)
-        
-        _, _, h, w = image1.shape
-        
-        attention_map = attention_weights.reshape(h//(4*scale), w//(4*scale), -1, h//(4*scale), w//(4*scale))
-        
-        image_path = "/home/ywang/dataset/SouthKensington/outdoor/video119/images/left/left000082.png"  # 替换为你的图像路径
-        current_image = cv2.imread(image_path)
-        current_image = cv2.cvtColor(current_image, cv2.COLOR_BGR2RGB) 
-        current_image_t = current_image.copy()
-        current_image_t[30*8:31*8, 13*8:14*8]= (255,0,0)
-        plt.imsave('current_image_t.svg',current_image_t)
-        
-        attention_map_t = attention_map[30, 13, 0, :].squeeze().detach().cpu().numpy()
-        attention_map_t_resized = cv2.resize(attention_map_t * 1.5 / attention_map_t.max(), (w, h))[8:736-8,...]
-        heatmap = cv2.applyColorMap(np.uint8(255 * attention_map_t_resized), cv2.COLORMAP_JET)
-        heatmap = cv2.cvtColor(heatmap, cv2.COLOR_BGR2RGB)
 
-        alpha = 0.1  # 透明度
-        image_path = "/home/ywang/dataset/SouthKensington/outdoor/video119/images/left/left000085.png"  # 替换为你的图像路径
-        original_image = cv2.imread(image_path)
-        original_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB) 
-        
-        superimposed_image = cv2.addWeighted(original_image, 1 - alpha, heatmap, alpha, 0)
-        
-        
-        #############################################################################
-        # attention_mask = attention_map_t_resized > 0.1
-        # original_image[attention_mask] = (255,0,0)
-        
-        plt.imsave('mask_image.svg',original_image)
-        
         
     def forward_update_block(
         self,
