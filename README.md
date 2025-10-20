@@ -70,8 +70,8 @@ cd ../..
 
 You can  download the checkpoints manually by clicking the links below. Copy the checkpoints to `./ckpt/ppmstereo/`.
 
-- [PPMStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_sf.pth) trained on SceneFlow
-- [PPMStereo](https://dl.fbaipublicfiles.com/dynamic_replica_v1/dynamic_stereo_dr_sf.pth) trained on SceneFlow and *Dynamic Replica*
+- [PPMStereo](https://drive.google.com/drive/folders/1mMPmpw0gGuwpmTvylkuSalLWzf3-LHFv?usp=drive_link) trained on SceneFlow
+- [PPMStereo](https://drive.google.com/drive/folders/1mMPmpw0gGuwpmTvylkuSalLWzf3-LHFv?usp=drive_link) trained on SceneFlow and *Dynamic Replica*
 
 To evaluate PPMStereo:
 ```
