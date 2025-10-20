@@ -92,8 +92,8 @@ cd ../..
 
 Download checkpoints and place them in `./ckpt/ppmstereo/`:
 
-- PPMStereo (SceneFlow) — [Google Drive](#)  
-- PPMStereo (SceneFlow + Dynamic Replica) — [Google Drive](#)
+- PPMStereo (SceneFlow) — [Google Drive](https://drive.google.com/drive/folders/1mMPmpw0gGuwpmTvylkuSalLWzf3-LHFv?usp=drive_link)  
+- PPMStereo (SceneFlow + Dynamic Replica) — [Google Drive](https://drive.google.com/drive/folders/1mMPmpw0gGuwpmTvylkuSalLWzf3-LHFv?usp=drive_link)
 
 **Example:**
 
