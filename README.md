@@ -28,7 +28,7 @@ Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng
 - **Pick-and-Play Memory (PPM):**  
   - **Pick:** via a **Quality Assessment Module (QAM)** to select reliable, non-redundant references.  
   - **Play:** query-adaptive weighting to aggregate selected frames for robust cost refinement.  
-- **Long-range consistency** with a **compact dynamic buffer**, avoiding costly exhaustive search.  
+- **Long-range consistency** with a **compact dynamic buffer**, avoiding costly computation.  
 - **Strong results** and **efficiency** under fewer RAFT-style iterations while maintaining accuracy.
 ---
 
