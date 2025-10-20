@@ -422,27 +422,6 @@ class PPMStereo(nn.Module):
         
         return sim
 
-    # def compute_qk_similarity(self, q, k, t=5):
-
-    #     # q = rearrange(q, "b c t h w -> (b t) c h w")
-    #     # k = rearrange(k, "b c t h w -> (b t) c h w")
-        
-    #     # # temporal attention
-    #     b, channels, t, height, width = q.shape
-
-    #     pool3d = nn.AvgPool3d(kernel_size=(1, 9, 9), stride=(1, 4, 4), padding=(0, 4, 4))
-    #     q_, k_ = torch.sigmoid(nn.AdaptiveAvgPool3d(output_size=1)(q)) * pool3d(q), torch.sigmoid(nn.AdaptiveAvgPool3d(output_size=1)(k)) * pool3d(k)
-
-    #     q_ = rearrange(q_, "b c t h w -> b 1 t (c h w)")
-    #     k_ = rearrange(k_, "b c t h w -> b 1 t (c h w)")
-        
-    #     q_, k_ = F.normalize(q_, p=2, dim=-1), F.normalize(k_, p=2, dim=-1)
-    #     k_ = k_.permute(0, 1, 3, 2).contiguous()
-        
-    #     score = torch.matmul(q_, k_) + 1.
-        
-    #     return 1.2 * score
-
         
     def forward_update_block(
         self,
