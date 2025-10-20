@@ -28,6 +28,7 @@ Yun Wang, Junjie Hu*, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapen
 - **Long-range consistency** with a **compact dynamic buffer**, avoiding costly exhaustive search.  
 - **Strong results** and **efficiency** under fewer RAFT-style iterations while maintaining accuracy.
 
+![teaser](msic/overview_2.jpg)
 ---
 
 ## Dataset: Dynamic Replica
