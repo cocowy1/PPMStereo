@@ -7,3 +7,6 @@
 [submodule ".third_party/RAFT-Stereo"]
 	path = .third_party/RAFT-Stereo
 	url = https://github.com/princeton-vl/RAFT-Stereo
+[submodule "third_party/RAFT-Stereo"]
+	path = third_party/RAFT-Stereo
+	url = https://github.com/princeton-vl/RAFT-Stereo.git
