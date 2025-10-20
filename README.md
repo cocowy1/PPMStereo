@@ -111,7 +111,7 @@ python train.py --batch_size 2 \
 If you want to train on SceneFlow only, remove the flag `dynamic_replica` from `train_datasets`.
 
 ## License
-The majority of dynamic_stereo is licensed under CC-BY-NC, however portions of the project are available under separate license terms: [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo) is licensed under the MIT license, [LoFTR](https://github.com/zju3dv/LoFTR) and [CREStereo](https://github.com/megvii-research/CREStereo) are licensed under the Apache 2.0 license.
+The project of PPMStereo is licensed under the MIT license.
 
 
 ## Citing DynamicStereo
