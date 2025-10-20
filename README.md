@@ -1,4 +1,4 @@
-#💥[NeurIPS 2025] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
+# 💥[NeurIPS 2025] PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching
 
 **City University of Hong Kong**
 
