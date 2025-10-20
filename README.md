@@ -123,7 +123,7 @@ parser.add_argument("--ckpt_model", default="./ckpt/ppmstereo/ppmstereo_dr_sf.pt
   type=str, help="restore checkpoint")
 ```
 
-> **GPU memory note:** Dynamic Replica uses high-resolution frames; a **≥48GB GPU** is recommended. If limited, set `MODEL.PPMStereoModel.kernel_size=10` (from 20), and/or reduce RAFT-style iterations (e.g., `iters=10` instead of 20) with a small accuracy drop.
+> **GPU memory note:** Dynamic Replica uses high-resolution frames; a **≥48GB GPU** is recommended. If limited, set `MODEL.PPMStereoModel.kernel_size=10` (from 20), or reduce RAFT-style iterations (e.g., `iters=10` instead of 20) with a small accuracy drop.
 
 All supported dynamic stereo baselines in this repo:
 
