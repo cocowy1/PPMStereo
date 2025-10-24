@@ -188,7 +188,7 @@ This project is released under the **MIT License**. See [LICENSE](./LICENSE).
 
 ## Acknowledgements
 
-Special thanks to Qiaole Dong for the contribution.
+Special thanks to [Qiaole Dong](https://dqiaole.github.io/) for the contribution.
 
 We thank the authors and maintainers of the following excellent projects:
 
