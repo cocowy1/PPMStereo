@@ -188,8 +188,11 @@ This project is released under the **MIT License**. See [LICENSE](./LICENSE).
 
 ## Acknowledgements
 
+Special thanks to Qiaole Dong for the contribution.
+
 We thank the authors and maintainers of the following excellent projects:
 
+- [MemFlow](https://github.com/DQiaole/MemFlow)
 - [DynamicStereo](https://github.com/facebookresearch/dynamic_stereo)  
 - [BidaStereo](https://github.com/TomTomTommi/bidastereo)  
 - [StereoAnyVideo](https://github.com/TomTomTommi/stereoanyvideo)  
