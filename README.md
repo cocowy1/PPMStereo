@@ -6,7 +6,7 @@ Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, Dapeng
 
 > **Status:** Accepted at NeurIPS 2025 (poster).
 
-[**Paper**](https://arxiv.org/abs/2510.20178) · [**Project Page**](https://github.com/cocowy1/PPMStereo/) · [**BibTeX**](https://scholar.googleusercontent.com/scholar.bib?q=info:7Up9eBTXquQJ:scholar.google.com/&output=citation&scisdr=ChU2sS-AELXUxkmQfWs:ABGrvjIAAAAAaP2WZWsv4oY-LI9zdYZqlNO8EVI&scisig=ABGrvjIAAAAAaP2WZbynfh9rfqDfQoITXkY3Eqg&scisf=4&ct=citation&cd=-1&hl=zh-CN)
+[**Paper**](https://arxiv.org/abs/2510.20178) · [**Project Page**](https://github.com/cocowy1/PPMStereo/) · [**BibTeX**](https://scholar.googleusercontent.com/scholar.bib?q=info:7Up9eBTXquQJ:scholar.google.com/&output=citation&scisdr=ChVmckdtEOWU5cMXq-A:ABGrvjIAAAAAaQsRs-AK-0hNhm0BHOQNpgV9iEA&scisig=ABGrvjIAAAAAaQsRs8aZKf74oUtDVOrLHzfy6c0&scisf=4&ct=citation&cd=-1&hl=zh-CN)
 
 ---
 ## 🌟 Demo Visualization
